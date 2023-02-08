@@ -11,6 +11,7 @@
     <title> Home </title>
 </head>
 <body>
+  <!-- Navbar-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <img src="./assets/logo.png" class="img-fluid logo" alt="logo">
@@ -96,8 +97,122 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-        </div>
+    </div>
 
+    <!-- Boxes-->
+    <div class="d-flex flex-wrap"> 
+      <div class="p-2 flex-grow-1 flex-shrink-1 w-50">
+        <!-- Estoy aprovechando la condición de 4 bloques para ponerlos ordenados de 2 en 2, es decir una fila de 2 de 50 50 y una segunda fila de 2 de 50-50 que funciona como responsive completo-->
+        <div class="card border rounded custom-card">
+          <div class="card-header header">
+            ACORDEON
+          </div>
+          <!-- Acordeon-->
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  Resumen general de este elemento
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                  En esta tarjeta se va a comentar lo que vamos a hacer en las tarjetas. Se tratan de 4 tarjetas ordenadas en un contenedor de 2 en 2 de forma que cada una de ellas ocupa un 50%.
+                  A través de las propiedades flex-grow-1 y flex-shrink-1 se consigue que el tamaño de la tarjeta se adapte a la pantalla, y que se mantenga el tamaño de la tarjeta en el caso de que se reduzca la pantalla.
+                  Esta tarjeta en concreto lo que introduce es un acordeon, que se puede abrir y cerrar, y que se puede abrir y cerrar a la vez que se abre y cierra otra tarjeta.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  Segunda tarjeta
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                  En la segunda tarjeta se ha introducido un sistema de login y mapa
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  Tercera tarjeta
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                  En la tercera tarjeta se ha introducido un sistema de 4 divs responsive en los que va a haber texto una imagen, y botones con toast
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segunda tarjeta -->
+      <div class="p-2 flex-grow-1 flex-shrink-1 w-50">
+        <div class="card border rounded custom-card">
+          <div class="card-header header">
+            LOGIN
+          </div>
+          <div class="d-flex flex-row card-body m-3 w-100">
+            <!-- Login -->
+            <div class="w-50 flex-grow-1">
+              <form>
+                <div class="form-group p-2">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group p-2">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group p-2">
+                  <button type="submit" class="btn btn-primary ">Get in</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Mapa -->
+            <div class="w-50 justify-content-center align-items-center">
+              <iframe src="https://maps.google.com/maps?q=pamplona&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+              style="border:0;height:100%;width: 100%;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Tercera tarjeta -->
+      <div class="p-2 flex-grow-1 w-50">
+        <div class="card border rounded custom-card">
+          <div class="card-header header">
+            MIX
+          </div>
+          <div class="d-flex flex-wrap flex-row card-body w-100 justify-content-between ">
+            <!-- Div 1 -->
+            <div>
+              <img src="./assets/js.png" class="img-logo">
+            </div>
+            <!-- Div 2 -->
+            <div>
+              <img src="./assets/boostrap.png" class="img-logo">
+            </div>
+            <!-- Div 3 -->
+            <div>
+              <img src="./assets/html.png"  class="img-logo">
+            </div>
+            <!-- Div 4 -->
+            <div>
+              <img src="./assets/css.png"  class="img-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer --> 
     <footer class="text-center text-lg-start bg-light text-muted">
         <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
             <div class="ms-5 d-none d-lg-block">
@@ -129,7 +244,7 @@
               <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   <h6 class="text-uppercase fw-bold mb-4">
-                    <i class="bi bi-code-slash"></i>GRUPO X
+                    <i class="bi bi-code-slash"></i> GRUPO X
                   </h6>
                   <p>
                     El objetivo de esta práctica es comprender los fundamentos de la libreríad e boostrap aplicados a javascript.
@@ -166,7 +281,7 @@
                   <p><i class="bi bi-person"></i> Diego López-Davalillo González</p>
                   <p>
                     <i class="bi bi-envelope"></i>
-                    Aqui estará la direccion de git
+                    <a href="https://github.com/diegodava09/demo-dsm-boostrap-2023.git"> Github</a>
                   </p>
                 </div>
                 <!-- Grid column -->
@@ -175,7 +290,7 @@
           </section>
         <section class="">
             <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2023 Copyright:
+                © 2023 Copyright
               </div>
         </section>
       </footer>
